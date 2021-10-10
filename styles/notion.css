@@ -1,7 +1,7 @@
 /**
  * This file contains site-specifc style overrides for Notion elements from
  * react-notion-x.
- * 
+ *
  * react-notion-x's goal is to match styling as close as possible to Notion,
  * whereas our goal with this site is to adjust Notion's styling in a few key
  * places to add some flare.
@@ -199,6 +199,8 @@
   position: relative;
   transition: unset;
   opacity: 1;
+  word-break: keep-all;
+  height: auto;
 }
 
 .notion-link:hover {
@@ -332,3 +334,116 @@
   border-image: linear-gradient(90.68deg, #b439df 0.26%, #e5337e 102.37%);
   border-image-slice: 1;
 }
+
+/* CUSTOM */
+
+.notion-table-row .notion-page-link .notion-page-title-text {
+  cursor: default !important;
+  text-decoration: none !important;
+  border-bottom: none;
+}
+.notion-table-row .notion-page-link svg {
+  display: none;
+}
+.notion-table {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.notion-table-view {
+padding: 8px !important;
+}
+
+@media only screen and (min-width: 600px) {
+  table,
+  th,
+  td {
+    border: 1px solid rgba(55, 53, 47, 0.09);
+    border-collapse: collapse;
+    font-size: 16px !important;
+    word-wrap: break-word !important;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  td a {
+    font-size: 17px !important;
+    word-wrap: break-word !important;
+  }
+
+  td span {
+    font-size: 15px !important;
+    word-wrap: break-word !important;
+  }
+
+  table {
+    border-left: none;
+    border-right: none;
+  }
+
+  th,
+  td {
+    font-weight: normal;
+    padding: 0.25em 0.5em;
+    line-height: 1.5;
+    min-height: 1.5em;
+    text-align: left;
+  }
+
+  th {
+    color: rgba(55, 53, 47, 0.6);
+  }
+
+  td > .user,
+  td > time {
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  table,
+  th,
+  td {
+    border: 1px solid rgba(55, 53, 47, 0.09);
+    border-collapse: collapse;
+    font-size: 16px !important;
+    word-wrap: break-word !important;
+  }
+
+  tr,
+  .notion-table-row {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px !important;
+    margin-top: 32px !important;
+  }
+  .notion-table-cell {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  td a {
+    font-size: 14px !important;
+    word-wrap: break-word !important;
+  }
+
+  td span {
+    font-size: 16px !important;
+    word-wrap: break-word !important;
+  }
+
+  td.cell-title,
+  tr {
+    padding-top: 32px !important;
+  }
+}
+
+p.p,
+p {
+  font-size: 16px !important;
+}
+
+/* ***** */
