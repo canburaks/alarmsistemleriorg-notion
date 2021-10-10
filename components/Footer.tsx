@@ -19,7 +19,10 @@ export default function Home() {
 
     const allAnchors = document.querySelectorAll('a')
     for (const a of allAnchors.values()) {
-      if (!whitelist.includes(a.host)) {
+      if (whitelist.includes(a.host)) {
+        a.rel="noopener"
+      }
+      else if (!whitelist.includes(a.host)) {
         a.rel = 'nofollow noopener'
       }
     }
