@@ -33,6 +33,22 @@ export default class MyDocument extends Document {
               sizes='16x16'
               href='/favicon-16x16.png'
             />
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=G-09D6BRLGG1`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-09D6BRLGG1', {
+              page_path: window.location.pathname,
+            });
+          `
+              }}
+            />
 
             <link rel='manifest' href='/manifest.json' />
           </Head>
