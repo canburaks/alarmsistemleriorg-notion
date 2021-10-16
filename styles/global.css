@@ -37,3 +37,7 @@ body {
   height: 1.2em !important;
   width: 1.2em !important;
 }
+
+article > figure > div > img {
+    border-radius: 8px;
+}
