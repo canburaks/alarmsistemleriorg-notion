@@ -13,6 +13,7 @@ export default function Home() {
       'livicom.net',
       'livicomturkiye.com',
       'www.cbsofyalioglu.com',
+      "webmeister.org",
       'alarmsistemleri.org',
       'tr.wikipedia.org'
     ]
@@ -58,10 +59,12 @@ export const Footer: React.FC<{
   return (
     <footer className={styles.footer}>
       <div className={styles.copyright}>
-        Copyright 2021.{' '}
-        <a href='https://www.cbsofyalioglu.com/' rel='me'>
-          {config.author}
+        Copyright 2021. Crafted with ❤️ by{' '}
+        <a href='https://www.webmeister.org/' >
+          webmeister
         </a>
+        .{' '}Contact with the <a href="https://www.cbsofyalioglu.com">developer</a>
+        .
       </div>
 
       {hasMounted ? (
