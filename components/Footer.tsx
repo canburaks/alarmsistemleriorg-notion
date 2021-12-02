@@ -60,7 +60,7 @@ export const Footer: React.FC<{
     <footer className={styles.footer}>
       <div className={styles.copyright}>
         Copyright 2021. Crafted with ❤️ by{' '}
-        <a href='https://www.webmeister.org/' >
+        <a href='https://webmeister.org/' >
           webmeister
         </a>
         .{' '}Contact with the <a href="https://www.cbsofyalioglu.com">developer</a>
